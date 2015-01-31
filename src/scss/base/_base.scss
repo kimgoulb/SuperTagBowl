@@ -1,0 +1,68 @@
+/* Base
+----------------------------------------------*/
+* { margin:0; padding: 0; outline:0; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+html { height:100%; }
+body { @include DistrictThin(); color:$midgrey; background-color: #fff; font-size: 100%; height:100%; -webkit-font-smoothing:antialiased; }
+
+html.locked, body.locked { overflow: hidden; }
+.hidden { display: none; }
+
+p, li, dd { line-height: 1.5em; }
+em, i, cite {  }
+strong, b { }
+sup { }
+sub { }
+mark { }
+dt {}
+dd { }
+
+blockquote { }
+::selection { background-color:#ddd; }
+
+/* Headings
+----------------------------------------------*/
+
+h1, h2, h3, h4, h5 ,h6 { @include DroidBold(); }
+h1 {font-size: emCal(30px); line-height: 40px; }
+h2 {font-size: emCal(20px); line-height: 20px; }
+h3 {font-size: emCal(20px); line-height: 20px; }
+h4 {font-size: emCal(18px); line-height: 25px; }
+h5 {font-size: emCal(14px); line-height: 20px; color:$ltgrey; }
+h6 {font-size: emCal(14px); line-height: 20px; color:$ltgrey; }
+p { font-size: emCal(25px); line-height: 35px; color:$midgrey;
+  @include respond-to(mobile) { font-size: emCal(18px); line-height: 28px; }
+}
+
+/* links
+----------------------------------------------*/
+a, a:link, a:visited {text-decoration: none; color: $midgrey; }
+a:hover, a:active {text-decoration: none; color: $red; }
+
+/* Media 
+----------------------------------------------*/
+img, video {width: 100%; height: auto; margin: 0 auto; display: block; }
+figcaption {font-size: 85%; }
+
+
+/* Videos
+----------------------------------------------*/
+.video_wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ height:0; overflow:hidden;
+  video, embed, iframe { display:block; position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+}
+
+/* Buttons
+----------------------------------------------*/
+.simple-btn {display: inline-block; margin:15px auto; color:#666; border: solid 1px #888; padding:10px 15px; background-color: transparent; cursor: pointer;
+	&:link, &:visited {color:#666; }
+	&:hover {color:#333; border: solid 1px #333; }
+}
+
+/* Iframe
+----------------------------------------------*/
+iframe {width:100%; height: auto; }
+
+/* Main
+----------------------------------------------*/
+.main { width:100%; height: 100%; }

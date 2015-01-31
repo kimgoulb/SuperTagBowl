@@ -1,0 +1,17 @@
+.left-rail { width:350px; height:100%; position: fixed; left:0; top:0; border-right: solid 1px #e3e3e3; text-align: center; z-index: 9999;
+  @include respond-to(tablet) { width:100%; height: auto; position: relative; padding: 100px 0; border-right: 0;  border-bottom: solid 1px #e3e3e3;}
+  @include respond-to(mobile) { width:100%; height: auto; position: relative; padding: 100px 0; border-right: 0;  border-bottom: solid 1px #e3e3e3; }
+  
+  .content-wrapper { position: relative; height:314px; top:50%; margin-top: -157px;
+    @include respond-to(tablet) { height: auto; top:0; margin-top: 0; }
+    @include respond-to(mobile) { height: auto; top:0; margin-top: 0; }
+    @media all and (max-height: 500px) { top:100px; margin-top:0; }
+  }
+
+  .logo { margin-bottom: 20px; }
+  .credit {
+    a:link, a:visited { @include DroidBold(); font-size: emCal(14px); text-transform: uppercase; color:$midgrey; margin-bottom: 10px; }
+    a:hover { color:$red; }
+  }
+  
+}

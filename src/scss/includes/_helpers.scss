@@ -1,0 +1,149 @@
+/*==========================================================================
+   COLORS
+ ========================================================================== */
+$red: #d23f29;
+$ltgrey: #c3c3c3;
+$midgrey: #999;
+$drkgrey: #585858;
+
+/*==========================================================================
+   MEDIA QUERIES // example @include respond-to(mobile) { }
+ ========================================================================== */
+
+  /*
+    @include respond-to(mobile) {}
+    @include respond-to(tablet) {}
+    @include respond-to(desktopSm) {}
+    @include respond-to(desktopLg) {}
+  */
+
+@mixin respond-to($media) {
+
+  @if $media == desktop {
+    $total-columns: 32;
+    @media all and (min-width: 1024px) { @content; }
+  }
+
+  @if $media == tablet {
+    $total-columns: 24;
+    @media all and (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+
+  @if $media == mobile {
+    $total-columns: 16;
+    @media all and (max-width: 767px) { @content; }
+  }
+}
+
+/*==========================================================================
+  FONTS
+ ========================================================================== */
+
+// stored in fonts folder
+@font-face {
+    font-family: 'District_ProThin';
+    src: url('/fonts/distproth-webfont.eot');
+    src: url('/fonts/distproth-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/distproth-webfont.woff2') format('woff2'),
+         url('/fonts/distproth-webfont.woff') format('woff'),
+         url('/fonts/distproth-webfont.ttf') format('truetype'),
+         url('/fonts/distproth-webfont.svg#district_prothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@mixin DistrictThin() { font-family: 'District_ProThin',Helvetica,sans-serif; }
+
+ // google font (loaded in header)
+@mixin DroidReg() { font-family: 'Droid Sans', Helvetica, sans-serif; font-weight: 400; font-style: normal; }
+@mixin DroidBold() { font-family: 'Droid Sans', Helvetica, sans-serif; font-weight: 700; font-style: normal; }
+
+/*==========================================================================
+   FUNCTIONS
+ ========================================================================== */
+$emBase: 16px; //default
+$total-columns: 12;
+
+// (em calculator)
+@function emCal($pixelBasedNum){
+  @return $pixelBasedNum / $emBase * 1em;
+}
+
+// column width in percent
+@function makeColumn($numOfCols,$context:$total-columns) {
+  @return ($numOfCols / $context) * 100%;
+}
+
+/*==========================================================================
+   MIXINS
+ ========================================================================== */
+
+@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
+@mixin box-sizing($type) { -webkit-box-sizing: $type; -moz-box-sizing: $type; box-sizing: $type; }
+@mixin transition($properties,$duration) {-moz-transition: $properties; -webkit-transition: $properties; -o-transition: $properties; transition: $properties;}
+@mixin transform($properties) {-webkit-transform: $properties; -moz-transform: $properties; -ms-transform: $properties; -o-transform: $properties; transform: $properties;}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+// column width
+@mixin column_width($numOfCols,$context:$total-columns) {
+   width: makeColumn($numOfCols,$context);
+}
+
+// retina.. Higher display density
+@mixin highdpi($ratio) {
+  @media all and (-webkit-min-device-pixel-ratio: $ratio)
+  and (min--moz-device-pixel-ratio: $ratio)
+  and (-o-min-device-pixel-ratio: $ratio)
+  and (min-resolution: $ratio*96 dpi) { @content; }
+}
+
+/*==========================================================================
+   SPRITES
+ ========================================================================== */
+
+$icons: sprite-map("icons/*.png", $layout: smart);
+$icons-2x: sprite-map("icons2x/*.png", $layout: smart);
+// $landing-icons: sprite-map("landing-icons/*.png", $layout: smart);
+// $landing-icons-2x: sprite-map("landing-icons2x/*.png", $layout: smart);
+
+//Sprite mixin, works perfectly with standard defines
+@mixin use-sprite($sprite, $active:false, $hover:false) {
+   background-image: sprite-url($icons);
+   background-position: sprite-position($icons, $sprite);
+   background-repeat: no-repeat;
+   overflow: hidden;
+   display: inline-block;
+   height: image-height(sprite-file($icons, $sprite));
+   width: image-width(sprite-file($icons, $sprite));
+
+   @if $hover == true {
+    &:hover, &.hover {
+      background-position: sprite-position($icons, ($sprite + "-hover"));
+      @include highdpi(2){ 
+        background-position: round(nth(sprite-position($icons-2x, ($sprite + "-hover")), 1) / 2) round(nth(sprite-position($icons-2x, ($sprite + "-hover")), 2) / 2);
+      }
+    }
+   }
+   
+   @if $active == true {
+    &:active, &.active {
+      background-position: sprite-position($icons, ($sprite + "-active"));
+      @include highdpi(2){ 
+        background-position: round(nth(sprite-position($icons-2x, ($sprite + "-active")), 1) / 2) round(nth(sprite-position($icons-2x, ($sprite + "-active")), 2) / 2);
+      }
+    }
+  }
+
+   @include highdpi(2){
+     background-image: sprite-url($icons-2x);
+     background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+     background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+     // height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+     // width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+   }
+}

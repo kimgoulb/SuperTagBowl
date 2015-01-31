@@ -1,0 +1,479 @@
+/*==========================================================================
+   COLORS
+ ========================================================================== */
+/*==========================================================================
+   MEDIA QUERIES // example @include respond-to(mobile) { }
+ ========================================================================== */
+/*
+  @include respond-to(mobile) {}
+  @include respond-to(tablet) {}
+  @include respond-to(desktopSm) {}
+  @include respond-to(desktopLg) {}
+*/
+/*==========================================================================
+  FONTS
+ ========================================================================== */
+@font-face {
+  font-family: 'District_ProThin';
+  src: url("/fonts/distproth-webfont.eot");
+  src: url("/fonts/distproth-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/distproth-webfont.woff2") format("woff2"), url("/fonts/distproth-webfont.woff") format("woff"), url("/fonts/distproth-webfont.ttf") format("truetype"), url("/fonts/distproth-webfont.svg#district_prothin") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*==========================================================================
+   FUNCTIONS
+ ========================================================================== */
+/*==========================================================================
+   MIXINS
+ ========================================================================== */
+/*==========================================================================
+   SPRITES
+ ========================================================================== */
+/* reset
+----------------------------------------------*/
+/* line 15, ../scss/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* line 22, ../scss/base/_reset.scss */
+html {
+  line-height: 1;
+  height: 100%;
+}
+
+/* line 27, ../scss/base/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 31, ../scss/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 36, ../scss/base/_reset.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 42, ../scss/base/_reset.scss */
+q, blockquote {
+  quotes: none;
+}
+
+/* line 46, ../scss/base/_reset.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 51, ../scss/base/_reset.scss */
+a img {
+  border: none;
+}
+
+/* line 55, ../scss/base/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../scss/base/_sprites.scss */
+.supertagbowl-logo {
+  background-image: url('../img/icons-s9ddd2989c1.png');
+  background-position: 0 -35px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  height: 260px;
+  width: 145px;
+}
+@media all and (-webkit-min-device-pixel-ratio: 2) and (min--moz-device-pixel-ratio: 2) and (-o-min-device-pixel-ratio: 2) and (min-resolution: 192 dpi) {
+  /* line 1, ../scss/base/_sprites.scss */
+  .supertagbowl-logo {
+    background-image: url('../img/icons2x-sb79f922239.png');
+    background-size: 145px 295px;
+    background-position: 0 -35px;
+  }
+}
+
+/* Base
+----------------------------------------------*/
+/* line 3, ../scss/base/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+/* line 4, ../scss/base/_base.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 6, ../scss/base/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 7, ../scss/base/_base.scss */
+body {
+  font-family: 'District_ProThin',Helvetica,sans-serif;
+  color: #999999;
+  background-color: #fff;
+  font-size: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 9, ../scss/base/_base.scss */
+html.locked, body.locked {
+  overflow: hidden;
+}
+
+/* line 10, ../scss/base/_base.scss */
+.hidden {
+  display: none;
+}
+
+/* line 12, ../scss/base/_base.scss */
+p, li, dd {
+  line-height: 1.5em;
+}
+
+/* line 22, ../scss/base/_base.scss */
+::-moz-selection {
+  background-color: #ddd;
+}
+
+/* line 22, ../scss/base/_base.scss */
+::selection {
+  background-color: #ddd;
+}
+
+/* Headings
+----------------------------------------------*/
+/* line 27, ../scss/base/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Droid Sans', Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* line 28, ../scss/base/_base.scss */
+h1 {
+  font-size: 1.875em;
+  line-height: 40px;
+}
+
+/* line 29, ../scss/base/_base.scss */
+h2 {
+  font-size: 1.25em;
+  line-height: 20px;
+}
+
+/* line 30, ../scss/base/_base.scss */
+h3 {
+  font-size: 1.25em;
+  line-height: 20px;
+}
+
+/* line 31, ../scss/base/_base.scss */
+h4 {
+  font-size: 1.125em;
+  line-height: 25px;
+}
+
+/* line 32, ../scss/base/_base.scss */
+h5 {
+  font-size: 0.875em;
+  line-height: 20px;
+  color: #c3c3c3;
+}
+
+/* line 33, ../scss/base/_base.scss */
+h6 {
+  font-size: 0.875em;
+  line-height: 20px;
+  color: #c3c3c3;
+}
+
+/* line 34, ../scss/base/_base.scss */
+p {
+  font-size: 1.5625em;
+  line-height: 35px;
+  color: #999999;
+}
+@media all and (max-width: 767px) {
+  /* line 34, ../scss/base/_base.scss */
+  p {
+    font-size: 1.125em;
+    line-height: 28px;
+  }
+}
+
+/* links
+----------------------------------------------*/
+/* line 40, ../scss/base/_base.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #999999;
+}
+
+/* line 41, ../scss/base/_base.scss */
+a:hover, a:active {
+  text-decoration: none;
+  color: #d23f29;
+}
+
+/* Media 
+----------------------------------------------*/
+/* line 45, ../scss/base/_base.scss */
+img, video {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 46, ../scss/base/_base.scss */
+figcaption {
+  font-size: 85%;
+}
+
+/* Videos
+----------------------------------------------*/
+/* line 51, ../scss/base/_base.scss */
+.video_wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+/* line 52, ../scss/base/_base.scss */
+.video_wrapper video, .video_wrapper embed, .video_wrapper iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Buttons
+----------------------------------------------*/
+/* line 57, ../scss/base/_base.scss */
+.simple-btn {
+  display: inline-block;
+  margin: 15px auto;
+  color: #666;
+  border: solid 1px #888;
+  padding: 10px 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* line 58, ../scss/base/_base.scss */
+.simple-btn:link, .simple-btn:visited {
+  color: #666;
+}
+/* line 59, ../scss/base/_base.scss */
+.simple-btn:hover {
+  color: #333;
+  border: solid 1px #333;
+}
+
+/* Iframe
+----------------------------------------------*/
+/* line 64, ../scss/base/_base.scss */
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* Main
+----------------------------------------------*/
+/* line 68, ../scss/base/_base.scss */
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1, ../scss/layout/_leftrail.scss */
+.left-rail {
+  width: 350px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: solid 1px #e3e3e3;
+  text-align: center;
+  z-index: 9999;
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  /* line 1, ../scss/layout/_leftrail.scss */
+  .left-rail {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 100px 0;
+    border-right: 0;
+    border-bottom: solid 1px #e3e3e3;
+  }
+}
+@media all and (max-width: 767px) {
+  /* line 1, ../scss/layout/_leftrail.scss */
+  .left-rail {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 100px 0;
+    border-right: 0;
+    border-bottom: solid 1px #e3e3e3;
+  }
+}
+/* line 5, ../scss/layout/_leftrail.scss */
+.left-rail .content-wrapper {
+  position: relative;
+  height: 314px;
+  top: 50%;
+  margin-top: -157px;
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  /* line 5, ../scss/layout/_leftrail.scss */
+  .left-rail .content-wrapper {
+    height: auto;
+    top: 0;
+    margin-top: 0;
+  }
+}
+@media all and (max-width: 767px) {
+  /* line 5, ../scss/layout/_leftrail.scss */
+  .left-rail .content-wrapper {
+    height: auto;
+    top: 0;
+    margin-top: 0;
+  }
+}
+@media all and (max-height: 500px) {
+  /* line 5, ../scss/layout/_leftrail.scss */
+  .left-rail .content-wrapper {
+    top: 100px;
+    margin-top: 0;
+  }
+}
+/* line 11, ../scss/layout/_leftrail.scss */
+.left-rail .logo {
+  margin-bottom: 20px;
+}
+/* line 13, ../scss/layout/_leftrail.scss */
+.left-rail .credit a:link, .left-rail .credit a:visited {
+  font-family: 'Droid Sans', Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  color: #999999;
+  margin-bottom: 10px;
+}
+/* line 14, ../scss/layout/_leftrail.scss */
+.left-rail .credit a:hover {
+  color: #d23f29;
+}
+
+/* line 1, ../scss/layout/_rightrail.scss */
+.right-rail {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+/* line 2, ../scss/layout/_rightrail.scss */
+.right-rail .content-wrapper {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 350px;
+  position: relative;
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  /* line 2, ../scss/layout/_rightrail.scss */
+  .right-rail .content-wrapper {
+    display: block;
+    padding-left: 0;
+  }
+}
+@media all and (max-width: 767px) {
+  /* line 2, ../scss/layout/_rightrail.scss */
+  .right-rail .content-wrapper {
+    display: block;
+    padding-left: 0;
+  }
+}
+/* line 8, ../scss/layout/_rightrail.scss */
+.right-rail .row a, .right-rail .row a:link, .right-rail .row a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 9, ../scss/layout/_rightrail.scss */
+.right-rail .row a:hover, .right-rail .row a:active {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+/* line 12, ../scss/layout/_rightrail.scss */
+.right-rail .intro {
+  text-align: center;
+  padding: 100px 30px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 13, ../scss/layout/_rightrail.scss */
+.right-rail .intro h2 {
+  font-size: 0.875em;
+  text-transform: uppercase;
+  color: #d23f29;
+  margin-bottom: 10px;
+}
+/* line 14, ../scss/layout/_rightrail.scss */
+.right-rail .intro p.mbtm {
+  margin-bottom: 40px;
+}
+/* line 15, ../scss/layout/_rightrail.scss */
+.right-rail .intro #countdown {
+  font-size: 2.1875em;
+  line-height: 40px;
+  min-height: 40px;
+}
+@media all and (max-width: 767px) {
+  /* line 15, ../scss/layout/_rightrail.scss */
+  .right-rail .intro #countdown {
+    font-size: 1.875em;
+    line-height: 40px;
+  }
+}
