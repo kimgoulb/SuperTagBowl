@@ -1,9 +1,26 @@
 {
-  "spots": [
-    {
+  "spots": {
+    "superbowl": {
+      "hashtag": "#Superbowl",
+      "brand": "Superbowl",
+      "video_url": "",
+      "hshtags_url": "http://hshtags.com/tags/v/Superbowl",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "bestbuds": {
       "hashtag": "#BestBuds",
       "brand": "Budweiser",
-      "video_url": "",
+      "video_url": "http://youtu.be/xAsjRRMMg_Q",
       "hshtags_url": "http://hshtags.com/tags/v/BestBuds",
       "post_count": {
         "total": 0,
@@ -17,7 +34,7 @@
         "tumblr": 0
       }
     },
-    {
+    "upforwhatever": {
       "hashtag": "#UpForWhatever",
       "brand": "Bud Light",
       "video_url": "",
@@ -34,7 +51,7 @@
         "tumblr": 0
       }
     },
-    {
+    "invisiblemindy": {
       "hashtag": "#InvisibleMindy",
       "brand": "Nationwide",
       "video_url": "",
@@ -51,7 +68,7 @@
         "tumblr": 0
       }
     }
-  ],
+  },
   "clock": {
     "quarter": "first",
     "time": "15:00"

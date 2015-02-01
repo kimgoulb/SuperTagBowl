@@ -90,13 +90,13 @@
             </ul>
             <ul class="description">
               <li class="desc play">
-                <a href="#" class="fresco"><span class="play-btn"></span></a>
+                <a ng-href="{{spot.video_url}}" class="fresco"><span class="play-btn"></span></a>
               </li>
               <li class="desc watch">
-                <a href="#" class="fresco">Watch Ad</a>
+                <a ng-href="{{spot.video_url}}" class="fresco">Watch Ad</a>
               </li>
               <li class="desc hshtags">
-                <a href="#">View on Hshtags</a>
+                <a ng-href="{{spot.hshtags_url}}">View on Hshtags</a>
               </li>
               <li class="desc social">
                 <div class="social-container">
@@ -236,10 +236,9 @@ app.directive("brandItem", function(){
     var open = $('ul#item'),
         a = $('div.items').find('ul');
 
-    console.log(a.hasClass('active'));
+    // console.log(a.hasClass('active'));
 
     element.on("click", function(e){
-      console.log('boom');
         e.preventDefault();
         var $this = $(this),
             speed = 400;
