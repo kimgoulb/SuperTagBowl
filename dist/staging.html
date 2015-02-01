@@ -81,7 +81,7 @@
               Count
             </li>
           </ul>
-          <div class="items" ng-repeat="spot in spots | toArray | orderBy:'post_count.total':true" ng-if="spot !== null && spot !== 'spots'">
+          <div class="items" ng-repeat="spot in spots | toArray | orderBy:'post_count.total'">
             <ul brand-item id="item">
               <li class="rank number" ng-bind="$index+1"></li>
               <li class="rank hashtag" ng-bind="spot.hashtag"></li>
@@ -205,20 +205,6 @@ app.filter("toArray", function(){
         return result;
     };
 });
-app.filter('orderObjectBy', function() {
-  return function(items, field, reverse) {
-    var filtered = [];
-    angular.forEach(items, function(item) {
-      filtered.push(item);
-    });
-    filtered.sort(function (a, b) {
-      return (a[field] > b[field] ? 1 : -1);
-    });
-    if(reverse) filtered.reverse();
-    return filtered;
-  };
-});
-
 
 </script>
 

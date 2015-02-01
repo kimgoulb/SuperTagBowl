@@ -81,9 +81,9 @@
               Count
             </li>
           </ul>
-          <div class="items" ng-repeat="spot in spots | toArray | orderBy:'post_count.total':true" ng-if="spot !== null && spot !== 'spots'">
+          <div class="items" ng-repeat="spot in spots">
             <ul brand-item id="item">
-              <li class="rank number" ng-bind="$index+1"></li>
+              <li class="rank number" ng-bind="$index"></li>
               <li class="rank hashtag" ng-bind="spot.hashtag"></li>
               <li class="rank brand" ng-bind="spot.brand"></li>
               <li class="rank count" ng-bind="spot.post_count.total"></li>
@@ -96,7 +96,7 @@
                 <a ng-href="{{spot.video_url}}" ng-if="spot.video_url !== ''" class="fresco">Watch Ad</a>
               </li>
               <li class="desc hshtags">
-                <a ng-href="{{spot.hshtags_url}}" target="_blank">View on Hshtags</a>
+                <a ng-href="{{spot.hshtags_url}}">View on Hshtags</a>
               </li>
               <li class="desc social">
                 <div class="social-container">
@@ -135,6 +135,68 @@
             </ul>
           </div>
 
+          <!-- working toggle / for preview only / delete when done -->
+          <div class="items">
+            <ul id="item">
+              <li class="rank number">
+                2
+              </li>
+              <li class="rank hashtag">
+                #Test
+              </li>
+              <li class="rank brand">
+                test
+              </li>
+              <li class="rank count">
+                680
+              </li>
+            </ul>
+            <ul class="description">
+              <li class="desc play">
+                <a href="https://vimeo.com/117134599" class="fresco"><span class="play-btn"></span></a>
+              </li>
+              <li class="desc watch">
+                <a href="https://vimeo.com/117134599" class="fresco">Watch Ad</a>
+              </li>
+              <li class="desc hshtags">
+                <a href="#">View on Hshtags</a>
+              </li>
+              <li class="desc social">
+                <div class="social-container">
+                  <a href="#"><span class="icon social-twitter"></span>
+                  <span class="social-count">1214</span></a>
+                </div>
+                <div class="social-container">
+                  <a href="#"><span class="icon social-fb"></span>
+                  <span class="social-count">564</span></a>
+                </div>
+                <div class="social-container">
+                  <a href="#"><span class="icon social-instagram"></span>
+                  <span class="social-count">130</span></a>
+                </div>
+                <div class="social-container">
+                  <a href="#"><span class="icon social-gplus"></span>
+                  <span class="social-count">340</span></a>
+                </div>
+                <div class="social-container">
+                  <a href="#"><span class="icon social-tumblr"></span>
+                  <span class="social-count">114</span></a>
+                </div>
+                <div class="social-container">
+                  <a href="#"><span class="icon social-flickr"></span>
+                  <span class="social-count">64</span></a>
+                </div>
+                <div class="social-container">
+                  <a href="#"><span class="icon social-youtube"></span>
+                  <span class="social-count">12</span></a>
+                </div>
+                <div class="social-container">
+                  <a href="#"><span class="icon social-vimeo"></span>
+                  <span class="social-count">3</span></a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
     </div>
   </div>
@@ -195,30 +257,6 @@ app.directive("brandItem", function(){
     link: link
   }
 });
-
-app.filter("toArray", function(){
-    return function(obj) {
-        var result = [];
-        angular.forEach(obj, function(val, key) {
-            result.push(val);
-        });
-        return result;
-    };
-});
-app.filter('orderObjectBy', function() {
-  return function(items, field, reverse) {
-    var filtered = [];
-    angular.forEach(items, function(item) {
-      filtered.push(item);
-    });
-    filtered.sort(function (a, b) {
-      return (a[field] > b[field] ? 1 : -1);
-    });
-    if(reverse) filtered.reverse();
-    return filtered;
-  };
-});
-
 
 </script>
 

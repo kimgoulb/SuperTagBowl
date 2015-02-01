@@ -1,0 +1,8 @@
+curl -X PATCH -d '{"last":"Jones"}' \
+ https://samplechat.firebaseio-demo.com/users/jack/name/.json
+
+curl -X PATCH -d '{"post_count":{"total":"1000"}}' \
+ https://super-tag-bowl.firebaseio.com/spots/bestbuds.json
+
+ curl https://super-tag-bowl.firebaseio.com/spots/superbowl/post_count/total/.json
+ 

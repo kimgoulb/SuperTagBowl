@@ -1,10 +1,10 @@
 {
   "spots": {
-    "superbowl": {
-      "hashtag": "#Superbowl",
-      "brand": "Superbowl",
-      "video_url": "",
-      "hshtags_url": "http://hshtags.com/tags/v/Superbowl",
+    "bestbuds": {
+      "hashtag": "#BestBuds",
+      "brand": "Budweiser",
+      "video_url": "http://youtu.be/EIUSkKTUftU",
+      "hshtags_url": "http://hshtags.com/tags/v/BestBuds",
       "post_count": {
         "total": 0,
         "facebook": 0,
@@ -17,11 +17,28 @@
         "tumblr": 0
       }
     },
-    "bestbuds": {
-      "hashtag": "#BestBuds",
-      "brand": "Budweiser",
-      "video_url": "http://youtu.be/xAsjRRMMg_Q",
-      "hshtags_url": "http://hshtags.com/tags/v/BestBuds",
+    "oneboldchoice": {
+      "hashtag": "#OneBoldChoice",
+      "brand": "Toyota",
+      "video_url": "http://youtu.be/PjUfygo5mzw",
+      "hshtags_url": "http://hshtags.com/tags/v/OneBoldChoice",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "realstrength": {
+      "hashtag": "#RealStrength",
+      "brand": "Dove",
+      "video_url": "http://youtu.be/QoqWo3SJ73c",
+      "hshtags_url": "http://hshtags.com/tags/v/RealStrength",
       "post_count": {
         "total": 0,
         "facebook": 0,
@@ -37,7 +54,7 @@
     "upforwhatever": {
       "hashtag": "#UpForWhatever",
       "brand": "Bud Light",
-      "video_url": "",
+      "video_url": "http://youtu.be/g9A1NowrnGI",
       "hshtags_url": "http://hshtags.com/tags/v/UpForWhatever",
       "post_count": {
         "total": 0,
@@ -54,8 +71,212 @@
     "invisiblemindy": {
       "hashtag": "#InvisibleMindy",
       "brand": "Nationwide",
-      "video_url": "",
+      "video_url": "http://youtu.be/P30yUzwSTKo",
       "hshtags_url": "http://hshtags.com/tags/v/InvisibleMindy",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "eatasnickers": {
+      "hashtag": "#EatASnickers",
+      "brand": "Snickers",
+      "video_url": "http://youtu.be/rqbomTIWCZ8",
+      "hshtags_url": "http://hshtags.com/tags/v/EatASnickers",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "lexusnx": {
+      "hashtag": "#LexusNX",
+      "brand": "Lexus",
+      "video_url": "http://youtu.be/OOex3JDJYF8",
+      "hshtags_url": "http://hshtags.com/tags/v/LexusNX",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "firstdraftever": {
+      "hashtag": "#FirstDraftEver",
+      "brand": "Avocados From Mexico",
+      "video_url": "http://youtu.be/26hl9YWLyn4",
+      "hshtags_url": "http://hshtags.com/tags/v/FirstDraftEver",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "withdad": {
+      "hashtag": "#WithDad",
+      "brand": "Nissan",
+      "video_url": "http://youtu.be/_znNS9zLb6c",
+      "hshtags_url": "http://hshtags.com/tags/v/WithDad",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "settleit": {
+      "hashtag": "#SettleIt",
+      "brand": "Skittles",
+      "video_url": "http://youtu.be/tqvSTAZRbCk",
+      "hshtags_url": "http://hshtags.com/tags/v/SettleIt",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "kimsdatastash": {
+      "hashtag": "#KimsDataStash",
+      "brand": "T-Mobile",
+      "video_url": "http://youtu.be/ZTwzsV3I3OQ",
+      "hshtags_url": "http://hshtags.com/tags/v/KimsDataStash",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "itsthateasy": {
+      "hashtag": "#ItsThatEasy",
+      "brand": "Wix",
+      "video_url": "http://youtu.be/P5SB1Ypy1EM",
+      "hshtags_url": "http://hshtags.com/tags/v/ItsThatEasy",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "staypowerful": {
+      "hashtag": "#StayPowerful",
+      "brand": "Morphie",
+      "video_url": "http://youtu.be/LuVsf_hE7gM",
+      "hshtags_url": "http://hshtags.com/tags/v/StayPowerful",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "hellofuture": {
+      "hashtag": "#HelloFuture",
+      "brand": "BMW",
+      "video_url": "http://youtu.be/U1jwWwJ-Mxc",
+      "hshtags_url": "http://hshtags.com/tags/v/HelloFuture",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "likeagirl": {
+      "hashtag": "#LikeAGirl",
+      "brand": "Always",
+      "video_url": "http://youtu.be/yIxA3o84syY",
+      "hshtags_url": "http://hshtags.com/tags/v/LikeAGirl",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "allnaturalburger": {
+      "hashtag": "#AllNaturalBurger",
+      "brand": "Carl's Jr.",
+      "video_url": "http://youtu.be/4WTA_8waxTo",
+      "hshtags_url": "http://hshtags.com/tags/v/AllNaturalBurger",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    "thebigrace": {
+      "hashtag": "#TheBigRace",
+      "brand": "Mercedes-Benz",
+      "video_url": "http://youtu.be/LQvdIGeUUvo",
+      "hshtags_url": "http://hshtags.com/tags/v/TheBigRace",
       "post_count": {
         "total": 0,
         "facebook": 0,
