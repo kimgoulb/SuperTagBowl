@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp        = require('gulp'),
+  connect        = require('gulp-connect'),
   compass     = require('gulp-compass'),
   sass          = require('gulp-ruby-sass'),
   autoprefixer  = require('gulp-autoprefixer'),
@@ -19,6 +20,14 @@ var paths = {
   app  : '../src',
   dest : '../dist'
 };
+
+gulp.task('connect', function() {
+  connect.server({
+    root: paths.dest
+  });
+});
+
+gulp.task('default', ['connect']);
 
 gulp.task('styles', function(){
   return gulp.src([
@@ -68,7 +77,9 @@ gulp.task('scripts:vendor', [], function(){
       paths.app + '/js/vendor/Placeholders.min.js',
       paths.app + '/js/vendor/respond.min.js',
       paths.app + '/js/vendor/selectivizr.min.js',
-      paths.app + '/js/vendor/html5shiv.js'
+      paths.app + '/js/vendor/html5shiv.js',
+      paths.app + '/js/vendor/jquery.easing.js',
+      paths.app + '/js/vendor/fresco.js'
     ])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest( paths.app + '/js'))

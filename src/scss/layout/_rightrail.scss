@@ -1,4 +1,6 @@
 .right-rail { width:100%; height:100%; display: table;
+  @include respond-to(mobile) { height: auto; }
+
   .content-wrapper { width:100%; display: table-cell; vertical-align: middle; padding-left: 350px; position: relative; 
     @include respond-to(tablet) { display: block; padding-left: 0; }
     @include respond-to(mobile) { display: block; padding-left: 0; }
@@ -9,12 +11,69 @@
     a:hover, a:active {text-decoration: none; color: #f3f3f3; }
   }
   
-  .intro { text-align: center; padding:100px 30px; max-width: 700px; width:100%; margin:0 auto;
-    h2 { font-size: emCal(14px); text-transform: uppercase; color:$red; margin-bottom: 10px; }
-    p.mbtm { margin-bottom: 40px; }
-    #countdown { font-size: emCal(35px); line-height: 40px; min-height: 40px;
-      @include respond-to(mobile) { font-size: emCal(30px); line-height: 40px; }
+  .intro { text-align: center; padding:100px 30px 80px; max-width: 700px; width:100%; margin:0 auto;
+    h2 { font-size: emCal(14px); text-transform: uppercase; color:$red; margin-bottom: 10px;
+      a:link, a:visited { color:$midgrey; }
+      a:hover { color:$red; }
     }
+    .down-arrow { display: inline-block; padding: 0 15px; vertical-align: middle; font-size: emCal(20px); }
+    .down-arrow:after { content: '\2193' }
+    p.mbtm { margin-bottom: 40px; }
   }
 
+  #ranking { height: 100vh;
+    ul#rank-header { padding: 10px 30px 10px 15px;
+      @include respond-to(mobile) { display: none; }
+
+      li.title { @include DroidBold(); font-size: emCal(14px); text-transform: uppercase; color:$ltgrey; display: inline-block;}
+      li.number { width: 7%; }
+      li.hashtag { width: 26%; }
+      li.brand { width: 21%; }
+      li.count { width: 43%; text-align: right; }
+    }
+    ul#item { border-top: solid 1px #e3e3e3; padding: 30px 30px 30px 15px;
+      li.rank { display: inline-block; vertical-align: middle; }
+      li.number { width: 7%; @include DroidBold(); font-size: emCal(20px); color: $ltgrey; text-align: center; }
+      li.hashtag { width: 26%; @include DroidBold(); font-size: emCal(20px); color:$ltgrey; }
+      li.brand { width: 21%; @include DroidBold(); font-size: emCal(14px); text-transform: uppercase; color:$ltgrey;
+        @include respond-to(mobile) { margin-left: 9%; display: block; }
+      }
+      li.count { width: 43%; @include DroidBold(); font-size: emCal(30px); color:$ltgrey; text-align: right;
+        @include respond-to(mobile) { float: right; margin-top: -48px; }
+      }
+    }
+    ul#item:hover { background: $red; cursor: pointer; }
+    ul#item:hover li.rank { color: #fff!important; }
+    .items:nth-of-type(1) ul#item {
+      li.number, li.hashtag, li.count { color: $red; }
+    }
+    ul.description { display: none; border-top: solid 1px #e3e3e3; background: $red; padding: 50px 30px 50px 15px;
+      @include respond-to(mobile) { text-align: center; padding: 30px 20px; }
+
+      a:link, a:visited, a:hover { color: #fff; }
+      li.desc { display: inline-block; vertical-align: middle; color: #fff; @include DroidBold(); font-size: emCal(14px); text-transform: uppercase; }
+      li.play { width: 7%; text-align: center;
+        @include respond-to(mobile) { width: auto; text-align: center; }
+      }
+      li.watch { width: 26%;
+        @include respond-to(mobile) { width: auto; padding: 0 30px 0 5px; }
+      }
+      li.hshtags { width: 21%;
+        @include respond-to(mobile) { width: auto; }
+      }
+      li.social { width: 43%; text-align: right;
+        @include respond-to(mobile) { width: 100%; text-align: center; display: block; margin-top: 15px; }
+
+        .social-container { margin: 0 18px 0 0px; display: inline-block; text-align:center;
+          @include respond-to(tablet) { margin: 0 14px 0 0; }
+          @media all and (max-width: 1194px) and (min-width: 1024px) { margin: 0 2.8% 0 0; }
+        }
+        .social-container:last-child { margin: 0px; }
+        .icon { vertical-align: middle; }
+        .social-count { font-size: emCal(14px); display: block; margin-top:10px;
+          @include respond-to(tablet) { font-size: emCal(12px); }
+        }
+      }
+    }
+  }
 }
