@@ -64,7 +64,6 @@
     });
 });
 
-
 // ranking toggle
 var open = $('ul#item'),
     a = $('div.items').find('ul');
@@ -85,7 +84,6 @@ open.click(function(e){
         $this.addClass('active').next('ul.description').delay(speed).slideDown(speed, easing);
     }
 });
-
 
 // smooth scrolling anchor links
 $(function() {

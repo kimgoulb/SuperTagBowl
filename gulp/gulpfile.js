@@ -9,6 +9,7 @@ var gulp        = require('gulp'),
   rename        = require('gulp-rename'),
   clean         = require('gulp-clean'),
   lr            = require('tiny-lr'),
+  browserify = require('gulp-browserify'),
   jshint        = require('gulp-jshint'),
   concat        = require('gulp-concat'),
   imagemin      = require('gulp-imagemin'),
@@ -21,6 +22,7 @@ var paths = {
   dest : '../dist'
 };
 
+// CONNECT
 gulp.task('connect', function() {
   connect.server({
     root: paths.dest
