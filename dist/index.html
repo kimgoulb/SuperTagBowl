@@ -40,7 +40,7 @@
 
 </head>
 
-<body>
+<body ng-app="superbowlApp">
 
 <div class="main">
   <div class="left-rail">
@@ -50,9 +50,9 @@
         <div class="credit"><a href="http://hshtags.com" target="_blank">Powered by Hshtags</a></div>
       </div>
     </div>
-    <div class="content-bottom">
+    <div class="content-bottom" ng-controller="ClockCtrl">
       <div class="content-bottom-wrapper">
-        <div class="quarter">First Quarter</div>
+        <div class="quarter"><span ng-bind="clock.quarter"></span> Quarter</div>
         <p id="countdown">
           <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
         </p>
@@ -67,7 +67,7 @@
           <p class="mbtm">Almost every brand that has secured an ad slot in this year's Super Bowl will include a special hashtag in their commercial. We will be ranking their success by the usage count of these hashtags during the game. May the best brand win.</p>
           <h2><a href="#ranking"><div class="down-arrow"></div> There can only be one <div class="down-arrow"></div></a></h2>
         </div>
-        <div id="ranking" ng-app="superbowlApp" ng-controller="SuperbowlCtrl">
+        <div id="ranking" ng-controller="SuperbowlCtrl">
           <ul id="rank-header">
             <li class="title number">
             </li>
@@ -82,19 +82,11 @@
             </li>
           </ul>
           <div class="items" ng-repeat="spot in spots">
-            <ul id="item">
-              <li class="rank number">
-                1
-              </li>
-              <li class="rank hashtag">
-                {{ spot.hashtag }}
-              </li>
-              <li class="rank brand">
-                {{ spot.brand }}
-              </li>
-              <li class="rank count">
-                2080
-              </li>
+            <ul brand-item id="item">
+              <li class="rank number" ng-bind="$index"></li>
+              <li class="rank hashtag" ng-bind="spot.hashtag"></li>
+              <li class="rank brand" ng-bind="spot.brand"></li>
+              <li class="rank count" ng-bind="spot.post_count.total"></li>
             </ul>
             <ul class="description">
               <li class="desc play">
@@ -109,35 +101,35 @@
               <li class="desc social">
                 <div class="social-container">
                   <a href="#"><span class="icon social-twitter"></span>
-                  <span class="social-count">1214</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.twitter"></span></a>
                 </div>
                 <div class="social-container">
                   <a href="#"><span class="icon social-fb"></span>
-                  <span class="social-count">564</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.facebook"></span></a>
                 </div>
                 <div class="social-container">
                   <a href="#"><span class="icon social-instagram"></span>
-                  <span class="social-count">130</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.instagram"></span></a>
                 </div>
                 <div class="social-container">
                   <a href="#"><span class="icon social-gplus"></span>
-                  <span class="social-count">340</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.googleplus"></span></a>
                 </div>
                 <div class="social-container">
                   <a href="#"><span class="icon social-tumblr"></span>
-                  <span class="social-count">114</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.tumblr"></span></a>
                 </div>
                 <div class="social-container">
                   <a href="#"><span class="icon social-flickr"></span>
-                  <span class="social-count">64</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.flickr"></span></a>
                 </div>
                 <div class="social-container">
                   <a href="#"><span class="icon social-youtube"></span>
-                  <span class="social-count">12</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.youtube"></span></a>
                 </div>
                 <div class="social-container">
                   <a href="#"><span class="icon social-vimeo"></span>
-                  <span class="social-count">3</span></a>
+                  <span class="social-count" ng-bind="spot.post_count.vimeo"></span></a>
                 </div>
               </li>
             </ul>
@@ -227,6 +219,44 @@ app.controller("SuperbowlCtrl", function($scope, $firebase) {
   // synchronize the object with a three-way data binding
   // click on `index.html` above to see it used in the DOM!
   syncObject.$bindTo($scope, "spots");
+});
+
+app.controller("ClockCtrl", function($scope, $firebase){
+
+  // CLOCK
+  var clockRef = new Firebase("https://super-tag-bowl.firebaseio.com/clock");
+  var clockSync = $firebase(clockRef);
+  var clockSyncObject = clockSync.$asObject();
+  clockSyncObject.$bindTo($scope, "clock");
+
+});
+
+app.directive("brandItem", function(){
+  var link = function(scope,element,attr) {
+    var open = $('ul#item'),
+        a = $('div.items').find('ul');
+
+    console.log(a.hasClass('active'));
+
+    element.on("click", function(e){
+      console.log('boom');
+        e.preventDefault();
+        var $this = $(this),
+            speed = 400;
+            easing = 'swing';
+        if($this.hasClass('active') === true) {
+            $this.removeClass('active').next('ul.description').slideUp(speed, easing);
+        } else if(a.hasClass('active') === false) {
+            $this.addClass('active').next('ul.description').slideDown(speed, easing);
+        } else {
+            a.removeClass('active').next('ul.description').slideUp(speed, easing);
+            $this.addClass('active').next('ul.description').delay(speed).slideDown(speed, easing);
+        }
+    });
+  }
+  return {
+    link: link
+  }
 });
 
 </script>

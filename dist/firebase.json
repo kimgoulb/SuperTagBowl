@@ -1,0 +1,59 @@
+{
+  "spots": [
+    {
+      "hashtag": "#BestBuds",
+      "brand": "Budweiser",
+      "video_url": "",
+      "hshtags_url": "http://hshtags.com/tags/v/BestBuds",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    {
+      "hashtag": "#UpForWhatever",
+      "brand": "Bud Light",
+      "video_url": "",
+      "hshtags_url": "http://hshtags.com/tags/v/UpForWhatever",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    },
+    {
+      "hashtag": "#InvisibleMindy",
+      "brand": "Nationwide",
+      "video_url": "",
+      "hshtags_url": "http://hshtags.com/tags/v/InvisibleMindy",
+      "post_count": {
+        "total": 0,
+        "facebook": 0,
+        "twitter": 0,
+        "instagram": 0, 
+        "googleplus": 0,
+        "flickr": 0,
+        "vimeo": 0,
+        "youtube": 0,
+        "tumblr": 0
+      }
+    }
+  ],
+  "clock": {
+    "quarter": "first",
+    "time": "15:00"
+  }
+}
